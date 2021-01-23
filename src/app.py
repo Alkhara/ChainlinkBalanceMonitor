@@ -58,6 +58,7 @@ w3 = Web3(Web3.HTTPProvider(provider))
 def get_cl_node_balance():
         ts = time.time()
         cl_node_balance = w3.eth.get_balance(cl_node_addr)
+        cl_node_balance = w3.fromWei(cl_node_balance, 'ether')
         x = {
         "ts": str(ts),
         "address": cl_node_addr,
@@ -66,7 +67,7 @@ def get_cl_node_balance():
         }
         ts_cl_addr = json.dumps(x)
         print(ts_cl_addr)
-        with open(home + "/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json", "a") as data:
+        with open("/data/balance_tracker.json", "a") as data:
                 data.write(ts_cl_addr)
                 data.close()
 
@@ -75,6 +76,7 @@ def get_cl_node_balance():
 def get_cl_ef_node_balance():
         ts = time.time()
         cl_ef_node_balance = w3.eth.get_balance(cl_ef_node_addr)
+        cl_ef_node_balance = w3.fromWei(cl_ef_node_balance, 'ether')
         x = {
         "ts": str(ts),
         "address": cl_ef_node_addr,
@@ -83,7 +85,7 @@ def get_cl_ef_node_balance():
         }
         ts_cl_ef_addr = json.dumps(x)
         print(ts_cl_ef_addr)
-        with open(home + "/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json", "a") as data:
+        with open("/data/balance_tracker.json", "a") as data:
                 data.write(ts_cl_ef_addr)
                 data.close()
 
