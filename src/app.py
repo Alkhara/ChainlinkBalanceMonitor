@@ -1,11 +1,9 @@
 from web3 import Web3
 from dotenv import load_dotenv
-from pathlib import Path
 import json
 import time
 import os
 
-home = str(Path.home())
 load_dotenv()
 
 
