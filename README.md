@@ -7,6 +7,7 @@ Monitor your Chainlink nodes Ethereum balance on the primary and emergency fundi
 ### Navigate to your Chainlink directory, clone the repo, set up your .env file
 * cd ~/.chainlink
 * git clone https://github.com/Alkhara/ChainlinkBalanceMonitor.git
+* cd ChainlinkBalanceMonitor/
 * nano .env
 
 ### Set your variables
