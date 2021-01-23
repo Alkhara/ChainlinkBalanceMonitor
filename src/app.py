@@ -1,10 +1,11 @@
 from web3 import Web3
 from dotenv import load_dotenv
+from pathlib import Path
 import json
 import time
 import os
 
-
+home = str(Path.home())
 load_dotenv()
 
 
@@ -65,7 +66,7 @@ def get_cl_node_balance():
         }
         ts_cl_addr = json.dumps(x)
         print(ts_cl_addr)
-        with open("~/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json", "a") as data:
+        with open(home + "/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json", "a") as data:
                 data.write(ts_cl_addr)
                 data.close()
 
@@ -82,7 +83,7 @@ def get_cl_ef_node_balance():
         }
         ts_cl_ef_addr = json.dumps(x)
         print(ts_cl_ef_addr)
-        with open("~/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json", "a") as data:
+        with open(home + "/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json", "a") as data:
                 data.write(ts_cl_ef_addr)
                 data.close()
 
