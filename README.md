@@ -19,7 +19,7 @@ Monitor your Chainlink nodes Ethereum balance on the primary and emergency fundi
 * docker build -t chainlinkbalancemonitor .
 
 ### Run it
-* cd ~/.chainlink/ChainlinkBalanceMonitor && docker run --network {{your-docker-network-your-siem-is-in}} --hostname clbm -it -v ~/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json:/etc/balance_tracker.json chainlinkbalancemonitor
+* cd ~/.chainlink/ChainlinkBalanceMonitor && docker run --network {{your-docker-network-your-siem-is-in}} --hostname clbm -it --env-file=.env -v ~/.chainlink/ChainlinkBalanceMonitor/balance_tracker.json:/etc/balance_tracker.json chainlinkbalancemonitor
 
 
 
