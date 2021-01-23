@@ -60,7 +60,7 @@ def get_cl_node_balance():
         x = {
         "ts": str(ts),
         "address": cl_node_addr,
-        "balance": cl_node_balance,
+        "balance": str(cl_node_balance),
         "type": "primary"
         }
         ts_cl_addr = json.dumps(x)
@@ -78,7 +78,7 @@ def get_cl_ef_node_balance():
         x = {
         "ts": str(ts),
         "address": cl_ef_node_addr,
-        "balance": cl_ef_node_balance,
+        "balance": str(cl_ef_node_balance),
         "type": "emergency"
         }
         ts_cl_ef_addr = json.dumps(x)
